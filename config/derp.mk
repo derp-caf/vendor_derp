@@ -221,6 +221,7 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     OmniStyle \
     LiveWallpapersPicker \
+    SoundPickerPrebuilt \
     MusicFX
 
 # SubstratumSignature Package
