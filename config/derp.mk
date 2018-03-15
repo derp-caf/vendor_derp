@@ -233,6 +233,10 @@ PRODUCT_PACKAGES += \
     SoundPickerPrebuilt \
     MusicFX
 
+# Fonts
+PRODUCT_PACKAGES += \
+    DU-Fonts
+
 # Switch themes
 PRODUCT_PACKAGES += \
     MD2Switch \
