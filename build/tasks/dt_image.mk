@@ -3,7 +3,9 @@
 #----------------------------------------------------------------------
 ifeq ($(strip $(BOARD_CUSTOM_BOOTIMG_MK)),)
 ifeq ($(strip $(BOARD_KERNEL_SEPARATED_DT)),true)
-ifneq ($(strip $(BOARD_KERNEL_PREBUILT_DT)),true)
+INSTALLED_DTIMAGE_TARGET := $(PRODUCT_OUT)/dt.img
+
+ifeq ($(strip $(BOARD_KERNEL_PREBUILT_DT)),)
 
 ifeq ($(strip $(TARGET_CUSTOM_DTBTOOL)),)
 DTBTOOL_NAME := dtbTool
