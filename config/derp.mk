@@ -188,6 +188,8 @@ PRODUCT_PACKAGES += \
     SnapdragonGallery \
     SnapdragonMusic \
     LatinIME \
+    OmniJaws \
+    OmniStyle \
     LiveWallpapersPicker \
     MusicFX
 
