@@ -59,6 +59,8 @@ PRODUCT_COPY_FILES += \
     vendor/derp/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/derp/prebuilt/bin/blacklist:system/addon.d/blacklist \
     vendor/derp/prebuilt/bin/whitelist:system/addon.d/whitelist \
+    vendor/derp/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
+
 
 ifeq ($(AB_OTA_UPDATER),true)
 PRODUCT_COPY_FILES += \
