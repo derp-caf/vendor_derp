@@ -185,6 +185,7 @@ DEVICE_PACKAGE_OVERLAYS += vendor/derp/overlay/*
 
 #Derp additions
 PRODUCT_PACKAGES += \
+    Turbo \
     SnapdragonGallery \
     SnapdragonMusic \
     LatinIME \
@@ -192,6 +193,14 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     LiveWallpapersPicker \
     MusicFX
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    vendor/derp/prebuilt/common/etc/permissions/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml
+
+# Sysconfig
+PRODUCT_COPY_FILES += \
+    vendor/derp/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
 
 # Omni Poor Man Themes
 PRODUCT_PACKAGES += \
