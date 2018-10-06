@@ -198,11 +198,12 @@ PRODUCT_PACKAGES += \
     DocumentsUITheme \
     DialerTheme \
     TelecommTheme
- PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
+    NotificationsXtended \
     NotificationsDark \
     NotificationsLight \
     NotificationsPrimary
- PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     AccentSluttyPink \
     AccentPixel \
     AccentGoldenShower \
@@ -216,9 +217,10 @@ PRODUCT_PACKAGES += \
     AccentDeadRed \
     AccentRottenOrange \
     AccentDeepPurple
- PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
     PrimaryBlack \
+    PrimaryXtended \
     PrimaryOmni \
     PrimaryWhite \
     PrimaryColdWhite \
