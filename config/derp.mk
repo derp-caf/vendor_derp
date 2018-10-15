@@ -200,6 +200,7 @@ PRODUCT_PACKAGES += \
     TelecommTheme
 PRODUCT_PACKAGES += \
     NotificationsXtended \
+    NotificationsBlack \
     NotificationsDark \
     NotificationsLight \
     NotificationsPrimary
