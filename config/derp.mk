@@ -222,6 +222,7 @@ PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
     PrimaryBlack \
     PrimaryXtended \
+    PrimaryXtendedClear \
     PrimaryOmni \
     PrimaryWhite \
     PrimaryColdWhite \
