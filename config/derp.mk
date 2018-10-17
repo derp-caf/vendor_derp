@@ -230,6 +230,13 @@ PRODUCT_PACKAGES += \
     SoundPickerPrebuilt \
     MusicFX
 
+# QS tile styles
+PRODUCT_PACKAGES += \
+    QStileCircleTrim \
+    QStileDefault \
+    QStileDualToneCircle \
+    QStileSquircleTrim
+
 # SubstratumSignature Package
 PRODUCT_COPY_FILES += \
      vendor/derp/prebuilt/common/app/SubstratumSignature.apk:system/priv-app/SubstratumSignature/SubstratumSignature.apk
