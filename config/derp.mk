@@ -243,7 +243,10 @@ PRODUCT_PACKAGES += \
     QStileNinja \
     QStilePokesign \
     QStileWavey \
-    QStileSquaremedo
+    QStileSquaremedo \
+    QStileOreo \
+    QStileOreoCircleTrim \
+    QStileOreoSquircleTrim
 
 # QS header styles
 PRODUCT_PACKAGES += \
