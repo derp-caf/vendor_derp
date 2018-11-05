@@ -213,6 +213,7 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     OmniStyle \
     LiveWallpapersPicker \
+    SubstratumSignature \
     MusicFX
 
 # Permissions
