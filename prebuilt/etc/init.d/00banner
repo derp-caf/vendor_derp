@@ -1,0 +1,7 @@
+#!/system/bin/sh
+#
+# Print startup info
+#
+L="log -p i -t derp"
+
+$L "Welcome to Derp-CAF-v`getprop ro.derp.version` / Open Source Project based on CAF";
