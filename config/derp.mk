@@ -178,3 +178,7 @@ CUSTOM_FINGERPRINT := Derp-CAF/$(PLATFORM_VERSION)/$(DERP_VERSION_CODENAME)-$(DE
 # TCP Connection Management
 PRODUCT_PACKAGES += tcmiface
 PRODUCT_BOOT_JARS += tcmiface
+
+# Overlays
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/derp/overlay/*
+DEVICE_PACKAGE_OVERLAYS += vendor/derp/overlay/*
