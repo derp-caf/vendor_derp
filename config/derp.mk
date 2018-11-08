@@ -55,7 +55,7 @@ endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/derp/prebuiltbin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/derp/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/derp/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/derp/prebuilt/bin/blacklist:system/addon.d/blacklist \
     vendor/derp/prebuilt/bin/whitelist:system/addon.d/whitelist \
