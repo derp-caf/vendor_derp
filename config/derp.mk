@@ -182,3 +182,11 @@ PRODUCT_BOOT_JARS += tcmiface
 # Overlays
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/derp/overlay/*
 DEVICE_PACKAGE_OVERLAYS += vendor/derp/overlay/*
+
+#Derp additions
+PRODUCT_PACKAGES += \
+    SnapdragonGallery \
+    SnapdragonMusic \
+    LatinIME \
+    LiveWallpapersPicker \
+    MusicFX
