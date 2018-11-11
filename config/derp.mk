@@ -244,6 +244,14 @@ PRODUCT_PACKAGES += \
     QStilePokesign \
     QStileWavey
 
+# QS header styles
+PRODUCT_PACKAGES += \
+    QSHeaderBlack \
+    QSHeaderGrey \
+    QSHeaderLightGrey \
+    QSHeaderAccent \
+    QSHeaderTransparent
+
 # SubstratumSignature Package
 PRODUCT_COPY_FILES += \
      vendor/derp/prebuilt/common/app/SubstratumSignature.apk:system/priv-app/SubstratumSignature/SubstratumSignature.apk
