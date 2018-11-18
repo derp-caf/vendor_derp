@@ -277,7 +277,8 @@ PRODUCT_PACKAGES += \
     ContactsTheme \
     DocumentsUITheme \
     DialerTheme \
-    TelecommTheme
+    TelecommTheme \
+    PhonographTheme
 
 PRODUCT_PACKAGES += \
     NotificationsXtended \
