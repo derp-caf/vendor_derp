@@ -162,13 +162,34 @@ endif
 # include definitions for SDCLANG
 include vendor/derp/build/sdclang/sdclang.mk
 
+ifndef DERP_BUILD_TYPE
+ifeq ($(DERP_RELEASE),true)
+    BUILD_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
+    FOUND = $(shell curl -s https://raw.githubusercontent.com/Derp-CAF/vendor_derp/p/derp.devices)
+    GOT_DEVICE =  $(filter $(BUILD_DEVICE), $(FOUND))
+    ifeq ($(GOT_DEVICE),$(BUILD_DEVICE))
+    IS_OFFICIAL=true
+    DERP_BUILD_TYPE := OFFICIAL
+    DERP_POSTFIX := -$(shell date +"%Y%m%d")
+    endif
+    ifneq ($(IS_OFFICIAL), true)
+       DERP_RELEASE=false
+       DERP_BUILD_TYPE := UNOFFICIAL
+       DERP_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
+       $(error Your Device is not official "$(FOUND)")
+    endif
+else
+    DERP_BUILD_TYPE := UNOFFICIAL
+    DERP_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
+endif
+endif
+
+
 # Derp-CAF versions.
 CAF_REVISION := LA.UM.7.2.r1-05300-sdm660.0
 DERP_VERSION_FLAVOUR = FREAK
 DERP_VERSION_CODENAME := 1.0
 PLATFORM_VERSION_FLAVOUR := Pie
-DERP_BUILD_TYPE := ALPHA
-DERP_POSTFIX := -$(shell date +"%Y%m%d")
 
 # Set all versions
 DERP_VERSION := DerpCAF-v$(DERP_VERSION_CODENAME)-$(DERP_VERSION_FLAVOUR)-$(PLATFORM_VERSION_FLAVOUR)-$(DERP_BUILD_TYPE)$(DERP_POSTFIX)
