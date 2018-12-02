@@ -190,8 +190,8 @@ endif
 #PRODUCT_COPY_FILES +=  \
 #    vendor/derp/prebuilt/common/etc/Changelog.txt:system/etc/Changelog.txt
 #else
-GENERATE_CHANGELOG := true
 #endif
+GENERATE_CHANGELOG := true
 
 # Derp-CAF versions.
 CAF_REVISION := LA.UM.7.2.r1-05300-sdm660.0
@@ -220,7 +220,6 @@ PRODUCT_PACKAGES += \
     LatinIME \
     OmniJaws \
     OmniStyle \
-    OmniDisplayManager \
     LiveWallpapersPicker \
     MusicFX
 
@@ -241,6 +240,7 @@ PRODUCT_PACKAGES += \
     DocumentsUITheme \
     DialerTheme \
     TelecommTheme
+
 PRODUCT_PACKAGES += \
     NotificationsXtended \
     NotificationsBlack \
@@ -262,7 +262,35 @@ PRODUCT_PACKAGES += \
     AccentDeadRed \
     AccentRottenOrange \
     AccentDeepPurple \
-    AccentBlackMagic
+    AccentBlackMagic \
+    AccentCandyRed \
+    AccentExtendedGreen \
+    AccentJadeGreen \
+    AccentPaleBlue \
+    AccentPaleRed \
+    AccentObfusBleu \
+    AccentNotImpPurple \
+    AccentHolillusion \
+    AccentMoveMint \
+    AccentFootprintPurple \
+    AccentBubblegumPink \
+    AccentFrenchBleu \
+    AccentManiaAmber \
+    AccentSeasideMint \
+    AccentDreamyPurple \
+    AccentSpookedPurple \
+    AccentHeirloomBleu \
+    AccentTruFilPink \
+    AccentWarmthOrange \
+    AccentColdBleu \
+    AccentDiffDayGreen \
+    AccentDuskPurple \
+    AccentBurningRed \
+    AccentHazedPink \
+    AccentColdYellow \
+    AccentNewHouseOrange \
+    AccentIllusionsPurple
+
 PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
     PrimaryBlack \
