@@ -185,6 +185,14 @@ endif
 endif
 
 
+# Changelog
+#ifeq ($(DERP_RELEASE),true)
+#PRODUCT_COPY_FILES +=  \
+#    vendor/derp/prebuilt/common/etc/Changelog.txt:system/etc/Changelog.txt
+#else
+GENERATE_CHANGELOG := true
+#endif
+
 # Derp-CAF versions.
 CAF_REVISION := LA.UM.7.2.r1-05300-sdm660.0
 DERP_VERSION_FLAVOUR = FREAK
@@ -212,9 +220,13 @@ PRODUCT_PACKAGES += \
     LatinIME \
     OmniJaws \
     OmniStyle \
+    OmniDisplayManager \
     LiveWallpapersPicker \
-    SubstratumSignature \
     MusicFX
+
+# SubstratumSignature Package
+PRODUCT_COPY_FILES += \
+     vendor/derp/prebuilt/common/app/SubstratumSignature.apk:system/priv-app/SubstratumSignature/SubstratumSignature.apk
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -276,6 +288,12 @@ PRODUCT_COPY_FILES += \
     vendor/derp/prebuilt/fonts/snowstorm/snowstorm.ttf:system/fonts/Snowstorm-Regular.ttf \
     vendor/derp/prebuilt/fonts/vcrosd/vcr_osd_mono.ttf:system/fonts/ThemeableFont-Regular.ttf \
     vendor/derp/prebuilt/fonts/vcrosd/vcr_osd_mono.ttf:system/fonts/ThemeableFont-Regular.ttf \
-    vendor/derp/prebuilt/fonts/Shamshung/Shamshung.ttf:system/fonts/Shamshung.ttf
+    vendor/derp/prebuilt/fonts/Shamshung/Shamshung.ttf:system/fonts/Shamshung.ttf \
+    vendor/derp/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
+    vendor/derp/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \
+    vendor/derp/fonts/GoogleSans-MediumItalic.ttf:system/fonts/GoogleSans-MediumItalic.ttf \
+    vendor/derp/fonts/GoogleSans-Italic.ttf:system/fonts/GoogleSans-Italic.ttf \
+    vendor/derp/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
+    vendor/derp/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf
 
 
