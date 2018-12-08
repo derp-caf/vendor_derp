@@ -186,12 +186,12 @@ endif
 
 
 # Changelog
-#ifeq ($(DERP_RELEASE),true)
-#PRODUCT_COPY_FILES +=  \
-#    vendor/derp/prebuilt/common/etc/Changelog.txt:system/etc/Changelog.txt
-#else
-#endif
+ifeq ($(DERP_RELEASE),true)
+PRODUCT_COPY_FILES +=  \
+    vendor/derp/prebuilt/common/etc/Changelog.txt:system/etc/Changelog.txt
+else
 GENERATE_CHANGELOG := true
+endif
 
 # Derp-CAF versions.
 CAF_REVISION := LA.UM.7.2.r1-05300-sdm660.0
