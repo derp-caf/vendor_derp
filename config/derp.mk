@@ -212,6 +212,12 @@ PRODUCT_BOOT_JARS += tcmiface
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/derp/overlay/*
 DEVICE_PACKAGE_OVERLAYS += vendor/derp/overlay/*
 
+# Default notification/alarm sounds
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.config.ringtone=The_big_adventure.ogg \
+    ro.config.notification_sound=Ping.ogg \
+    ro.config.alarm_alert=Spokes.ogg
+
 #Derp additions
 PRODUCT_PACKAGES += \
     Turbo \
