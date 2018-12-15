@@ -265,6 +265,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/derp/prebuilt/common/etc/permissions/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml
 
+PRODUCT_COPY_FILES += \
+    vendor/derp/prebuilt/common/etc/permissions/privapp-permissions-omnijaws.xml:system/etc/permissions/privapp-permissions-omnijaws.xml
+
 # Sysconfig
 PRODUCT_COPY_FILES += \
     vendor/derp/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
