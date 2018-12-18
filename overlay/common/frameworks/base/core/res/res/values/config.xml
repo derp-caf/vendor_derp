@@ -97,24 +97,8 @@
     <!-- Flag indicating whether we should enable smart battery. -->
     <bool name="config_smart_battery_available">true</bool>
 
-    <!-- If this is true, long press on power button will be available from the non-interactive state
-    <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool> -->
-
-    <!-- Defines the default set of global actions. Actions may still be disabled or hidden based
-         on the current state of the device.
-         Each item must be one of the following strings:
-         "power" = Power off
-         "reboot" = Reboot
-         "airplane" = Airplane mode toggle
-         "users" = list of users
-         "settings" = An action to launch settings
-         "bugreport" = Take bug report, if available
-         "silent" = silent mode
-         -->
-    <string-array translatable="false" name="config_globalActionsList">
-        <item>power</item>
-        <item>reboot</item>
-    </string-array>
+    <!-- If this is true, long press on power button will be available from the non-interactive state -->
+    <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
 
     <!-- Round UI stuff -->
     <!-- default window inset isRound property -->
