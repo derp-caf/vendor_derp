@@ -271,6 +271,7 @@ PRODUCT_COPY_FILES += \
 
 # Omni Poor Man Themes
 PRODUCT_PACKAGES += \
+    ContactsTheme \
     DocumentsUITheme \
     DialerTheme \
     TelecommTheme
