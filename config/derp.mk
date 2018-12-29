@@ -233,6 +233,12 @@ PRODUCT_PACKAGES += \
     SoundPickerPrebuilt \
     MusicFX
 
+# Switch themes
+PRODUCT_PACKAGES += \
+    MD2Switch \
+    OnePlusSwitch \
+    StockSwitch
+
 # QS tile styles
 PRODUCT_PACKAGES += \
     QStileCircleTrim \
