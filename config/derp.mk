@@ -277,6 +277,7 @@ PRODUCT_PACKAGES += \
     ContactsTheme \
     DocumentsUITheme \
     DialerTheme \
+    MessagesTheme \
     TelecommTheme \
     PhonographTheme
 
