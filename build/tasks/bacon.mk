@@ -18,14 +18,39 @@
 # Derp-CAF OTA update package
 DERP_TARGET_PACKAGE := $(PRODUCT_OUT)/$(DERP_MOD_VERSION).zip
 
+# Shell color defs:
+CL_RED="\033[31m"
+CL_GRN="\033[32m"
+CL_YLW="\033[33m"
+CL_BLU="\033[34m"
+CL_MAG="\033[35m"
+CL_CYN="\033[36m"
+CL_RST="\033[0m"
+
 .PHONY: bacon
 derp: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(DERP_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(DERP_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(DERP_TARGET_PACKAGE).md5sum
-	@echo "done"
-	@echo "===============================-Package complete-============================================================="
-	@echo "Zip: $(DERP_TARGET_PACKAGE)"
-	@echo "MD5: `cat $(DERP_TARGET_PACKAGE).md5sum | awk '{print $$1}' `"
-	@echo "Size: `du -sh $(DERP_TARGET_PACKAGE) | awk '{print $$1}' `"
-	@echo "=============================================================================================================="
+	 @echo "Package Complete: $(INTERNAL_BACON_TARGET)" >&2
+	 @echo -e ${CL_RST}"                                                                      "${CL_RST}
+	 @echo -e ${CL_RED}"                                                                      "${CL_RED}
+	 @echo -e ${CL_RED}"  ▓█████▄ ▓█████  ██▀███   ██▓███   ▄████▄   ▄▄▄        █████▒        "${CL_RED}
+	 @echo -e ${CL_RED}"  ▒██▀ ██▌▓█   ▀ ▓██ ▒ ██▒▓██░  ██▒▒██▀ ▀█  ▒████▄    ▓██             "${CL_RED}
+	 @echo -e ${CL_RED}"  ░██   █▌▒███   ▓██ ░▄█ ▒▓██░ ██▓▒▒▓█    ▄ ▒██  ▀█▄  ▒████           "${CL_RED}
+	 @echo -e ${CL_RED}"  ░▓█▄   ▌▒▓█  ▄ ▒██▀▀█▄  ▒██▄█▓▒ ▒▒▓▓▄ ▄██▒░██▄▄▄▄██ ░▓█▒            "${CL_RED}
+	 @echo -e ${CL_RED}"  ░▒████▓ ░▒████▒░██▓ ▒██▒▒██▒ ░  ░▒ ▓███▀ ░ ▓█   ▓██▒░▒█░            "${CL_RED}
+	 @echo -e ${CL_RED}"   ▒▒▓  ▒ ░░ ▒░ ░░ ▒▓ ░▒▓░▒▓▒░ ░  ░░ ░▒ ▒  ░ ▒▒   ▓▒█░ ▒ ░            "${CL_RED}
+	 @echo -e ${CL_RED}"   ░ ▒  ▒  ░ ░  ░  ░▒ ░ ▒░░▒ ░       ░  ▒     ▒   ▒▒ ░ ░              "${CL_RED}
+	 @echo -e ${CL_RED}"   ░ ░  ░    ░     ░░   ░ ░░       ░          ░   ▒    ░ ░            "${CL_RED}
+	 @echo -e ${CL_RST}"                                                                      "${CL_RST}
+	 @echo -e ${CL_RST}"                                                                      "${CL_RST}
+	 @echo -e ${CL_RST}"           Build completed! Now derp your phone and enjoy!!           "${CL_RST}
+	 @echo -e ${CL_RST}"                                                                      "${CL_RST}
+	 @echo -e ${CL_RED}"======================================================================"${CL_RED}
+	 @echo -e ${CL_RST}"  $(INTERNAL_BACON_TARGET)                                            "${CL_RST}
+	 @echo "Zip: $(DERP_TARGET_PACKAGE)"
+	 @echo -e ${CL_BLD}${CL_YLW}"Size:"${CL_YLW}" `du -sb $(INTERNAL_BACON_TARGET) | awk '{print $$1}' `"${CL_RST}
+	 @echo -e ${CL_RED}"======================================================================"${CL_RED}
+	 @echo -e ${CL_RST}"                                                                      "${CL_RST}
+
