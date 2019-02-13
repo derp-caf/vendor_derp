@@ -363,4 +363,5 @@ PRODUCT_COPY_FILES += \
     vendor/derp/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
     vendor/derp/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf
 
-
+#BootAnimation
+$(call inherit-product, vendor/derp/config/bootanimation.mk)
