@@ -163,14 +163,14 @@ endif
 include vendor/derp/build/sdclang/sdclang.mk
 
 ifndef DERP_BUILD_TYPE
-ifeq ($(DERP_RELEASE),true)
     BUILD_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
+ifeq ($(DERP_RELEASE),true)
     FOUND = $(shell curl -s https://raw.githubusercontent.com/Derp-CAF/vendor_derp/p/derp.devices)
     GOT_DEVICE =  $(filter $(BUILD_DEVICE), $(FOUND))
     ifeq ($(GOT_DEVICE),$(BUILD_DEVICE))
     IS_OFFICIAL=true
     DERP_BUILD_TYPE := OFFICIAL
-    DERP_POSTFIX := -$(shell date +"%Y%m%d")
+    DERP_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
     endif
     ifneq ($(IS_OFFICIAL), true)
        DERP_RELEASE=false
