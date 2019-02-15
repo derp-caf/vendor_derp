@@ -249,7 +249,8 @@ PRODUCT_PACKAGES += \
     QStileSquaremedo \
     QStileOreo \
     QStileOreoCircleTrim \
-    QStileOreoSquircleTrim
+    QStileOreoSquircleTrim \
+    QStilesCircleOutline
 
 # QS header styles
 PRODUCT_PACKAGES += \
