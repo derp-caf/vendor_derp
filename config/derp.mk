@@ -222,7 +222,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     Turbo \
     SnapdragonGallery \
-    SnapdragonMusic \
+    Phonograph \
+    Recorder \
     LatinIME \
     OmniJaws \
     OmniStyle \
