@@ -339,6 +339,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     PrimaryAlmostBlack \
     PrimaryBlack \
+    PrimaryDerpRed \
     PrimaryXtended \
     PrimaryXtendedClear \
     PrimaryEyeSoother \
