@@ -157,9 +157,6 @@ PRODUCT_COPY_FILES += \
 endif
 
 
-# include definitions for SDCLANG
-include vendor/derp/build/sdclang/sdclang.mk
-
 ifndef DERP_BUILD_TYPE
     BUILD_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 ifeq ($(DERP_RELEASE),true)
@@ -383,6 +380,18 @@ PRODUCT_PACKAGES += \
 #    vendor/derp/fonts/GoogleSans-Italic.ttf:system/fonts/GoogleSans-Italic.ttf \
 #    vendor/derp/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
 #    vendor/derp/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf
+
+ifneq ($(HOST_OS),linux)
+ifneq ($(sdclang_already_warned),true)
+$(warning **********************************************)
+$(warning * SDCLANG is not supported on non-linux hosts.)
+$(warning **********************************************)
+sdclang_already_warned := true
+endif
+else
+# include definitions for SDCLANG
+include vendor/derp/sdclang/sdclang.mk
+endif
 
 #BootAnimation
 $(call inherit-product, vendor/derp/config/bootanimation.mk)
