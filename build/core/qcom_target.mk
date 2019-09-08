@@ -9,13 +9,37 @@ $(call project-set-path,qcom-$(2),$(strip $(path)))
 endef
 
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
-    $(call set-device-specific-path,DATA-IPA-CFG-MGR,data-ipa-cfg-mgr,vendor/qcom/opensource/data-ipa-cfg-mgr)
-    $(call set-device-specific-path,AUDIO,audio,hardware/qcom/audio/$(QCOM_HARDWARE_VARIANT))
-    $(call set-device-specific-path,DISPLAY,display,hardware/qcom/display/$(QCOM_HARDWARE_VARIANT))
-    $(call set-device-specific-path,MEDIA,media,hardware/qcom/media/$(QCOM_HARDWARE_VARIANT))
-    $(call set-device-specific-path,GPS,gps,hardware/qcom/gps)
-    $(call set-device-specific-path,POWER,power,hardware/qcom/power)
-    $(call set-device-specific-path,THERMAL,thermal,hardware/qcom/thermal)
-    $(call set-device-specific-path,VR,vr,hardware/qcom/vr)
-endif # BOARD_USES_QCOM_HARDWARE
+$(call set-device-specific-path,AUDIO,audio,hardware/qcom/$(QCOM_HARDWARE_VARIANT)/audio)
+$(call set-device-specific-path,DISPLAY,display,hardware/qcom/$(QCOM_HARDWARE_VARIANT)/display)
+$(call set-device-specific-path,MEDIA,media,hardware/qcom/$(QCOM_HARDWARE_VARIANT)/media)
 
+$(call set-device-specific-path,BT_VENDOR,bt-vendor,hardware/qcom/bt)
+$(call set-device-specific-path,CAMERA,camera,hardware/qcom/camera)
+$(call set-device-specific-path,DATA_IPA_CFG_MGR,data-ipa-cfg-mgr,vendor/qcom/opensource/data-ipa-cfg-mgr)
+$(call set-device-specific-path,GPS,gps,hardware/qcom/gps)
+$(call set-device-specific-path,SENSORS,sensors,hardware/qcom/sensors)
+$(call set-device-specific-path,LOC_API,loc-api,vendor/qcom/opensource/location)
+$(call set-device-specific-path,DATASERVICES,dataservices,vendor/qcom/opensource/dataservices)
+$(call set-device-specific-path,POWER,power,hardware/qcom/power)
+$(call set-device-specific-path,THERMAL,thermal,hardware/qcom/thermal)
+$(call set-device-specific-path,VR,vr,hardware/qcom/vr)
+$(call set-device-specific-path,WLAN,wlan,hardware/qcom/wlan)
+
+PRODUCT_CFI_INCLUDE_PATHS += \
+    hardware/qcom-caf/wlan/qcwcn/wpa_supplicant_8_lib
+else
+
+$(call set-device-specific-path,AUDIO,audio,hardware/qcom/audio)
+$(call set-device-specific-path,DISPLAY,display,hardware/qcom/display/$(TARGET_BOARD_PLATFORM))
+$(call set-device-specific-path,MEDIA,media,hardware/qcom/media/$(TARGET_BOARD_PLATFORM))
+
+$(call set-device-specific-path,BT_VENDOR,bt-vendor,hardware/qcom/bt)
+$(call set-device-specific-path,CAMERA,camera,hardware/qcom/camera)
+$(call set-device-specific-path,GPS,gps,hardware/qcom/gps)
+$(call set-device-specific-path,SENSORS,sensors,hardware/qcom/sensors)
+$(call set-device-specific-path,LOC_API,loc-api,vendor/qcom/opensource/location)
+$(call set-device-specific-path,DATASERVICES,dataservices,$(TARGET_DEVICE_DIR)/dataservices)
+$(call set-device-specific-path,IPACFG_MGR,ipacfg-mgr,hardware/qcom/data/ipacfg-mgr)
+$(call set-device-specific-path,WLAN,wlan,hardware/qcom/wlan)
+
+endif
