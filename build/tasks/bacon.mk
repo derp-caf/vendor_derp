@@ -50,7 +50,6 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	 @echo -e ${CL_RED}"======================================================================"${CL_RED}
 	 @echo -e ${CL_RST}"  $(INTERNAL_BACON_TARGET)                                            "${CL_RST}
 	 @echo "Zip: $(DERP_TARGET_PACKAGE)"
-	 @echo -e ${CL_BLD}${CL_YLW}"Size:"${CL_YLW}" `du -sb $(INTERNAL_BACON_TARGET) | awk '{print $$1}' `"${CL_RST}
+	 @echo -e ${CL_BLD}${CL_YLW}"Size:"${CL_YLW}" `du -sh $(INTERNAL_BACON_TARGET) | awk '{print $$1}' `"${CL_RST}
 	 @echo -e ${CL_RED}"======================================================================"${CL_RED}
 	 @echo -e ${CL_RST}"                                                                      "${CL_RST}
-
