@@ -122,20 +122,6 @@ PRODUCT_PACKAGES += \
     mkfs.ntfs \
     mount.ntfs
 
-# Telephony packages
-PRODUCT_PACKAGES += \
-    messaging \
-    CellBroadcastReceiver \
-    Stk
-
-#RCS
-PRODUCT_PACKAGES += \
-    rcs_service_aidl \
-    rcs_service_aidl.xml \
-    rcs_service_aidl_static \
-    rcs_service_api \
-    rcs_service_api.xml
-
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
@@ -198,10 +184,6 @@ PLATFORM_VERSION_FLAVOUR := 10
 DERP_VERSION := DerpCAF-v$(DERP_VERSION_CODENAME)-$(DERP_VERSION_FLAVOUR)-$(PLATFORM_VERSION_FLAVOUR)-$(DERP_BUILD_TYPE)$(DERP_POSTFIX)
 DERP_MOD_VERSION := DerpCAF-v$(DERP_VERSION_CODENAME)-$(DERP_VERSION_FLAVOUR)-$(PLATFORM_VERSION_FLAVOUR)-$(DERP_BUILD)-$(DERP_BUILD_TYPE)$(DERP_POSTFIX)
 CUSTOM_FINGERPRINT := Derp-CAF/$(PLATFORM_VERSION)/$(DERP_VERSION_CODENAME)-$(DERP_VERSION_FLAVOUR)/$(TARGET_PRODUCT)/$(shell date +%Y%m%d-%H:%M)
-
-# TCP Connection Management
-PRODUCT_PACKAGES += tcmiface
-PRODUCT_BOOT_JARS += tcmiface
 
 # Overlays
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/derp/overlay/*
@@ -395,3 +377,7 @@ endif
 
 #BootAnimation
 $(call inherit-product, vendor/derp/config/bootanimation.mk)
+
+#Telephony
+$(call inherit-product, vendor/derp/config/telephony.mk)
+
