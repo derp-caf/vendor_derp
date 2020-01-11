@@ -126,11 +126,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     messaging \
     CellBroadcastReceiver \
-    Stk \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+    Stk
 
 #RCS
 PRODUCT_PACKAGES += \
@@ -188,18 +184,18 @@ endif
 
 
 # Changelog
-ifeq ($(DERP_RELEASE),true)
-PRODUCT_COPY_FILES +=  \
-    vendor/derp/prebuilt/common/etc/Changelog.txt:system/etc/Changelog.txt
-else
-GENERATE_CHANGELOG := true
-endif
+#ifeq ($(DERP_RELEASE),true)
+#PRODUCT_COPY_FILES +=  \
+#    vendor/derp/prebuilt/common/etc/Changelog.txt:system/etc/Changelog.txt
+#else
+#GENERATE_CHANGELOG := true
+#endif
 
 # Derp-CAF versions.
-CAF_REVISION := LA.UM.7.2.r1-07400-sdm660.0
-DERP_VERSION_FLAVOUR = FUN
-DERP_VERSION_CODENAME := 0.03
-PLATFORM_VERSION_FLAVOUR := Pie
+CAF_REVISION := LA.UM.8.1.r1-12600-sm8150.0
+DERP_VERSION_FLAVOUR = ALPHA
+DERP_VERSION_CODENAME := 0.04
+PLATFORM_VERSION_FLAVOUR := 10
 
 # Set all versions
 DERP_VERSION := DerpCAF-v$(DERP_VERSION_CODENAME)-$(DERP_VERSION_FLAVOUR)-$(PLATFORM_VERSION_FLAVOUR)-$(DERP_BUILD_TYPE)$(DERP_POSTFIX)
@@ -234,159 +230,159 @@ PRODUCT_PACKAGES += \
     MusicFX
 
 # Switch themes
-PRODUCT_PACKAGES += \
-    MD2Switch \
-    OnePlusSwitch \
-    StockSwitch \
-    SwitchOne \
-    SwitchTwo \
-    SwitchThree \
-    SwitchFour \
-    SwitchFive \
-    SwitchSix \
-    SwitchSeven \
-    SwitchEight \
-    SwitchNine
+#PRODUCT_PACKAGES += \
+ #   MD2Switch \
+ #  OnePlusSwitch \
+ #   StockSwitch \
+ #   SwitchOne \
+ #   SwitchTwo \
+ #   SwitchThree \
+ #   SwitchFour \
+ #   SwitchFive \
+ #   SwitchSix \
+ #   SwitchSeven \
+ #   SwitchEight \
+ #   SwitchNine
 
 # QS tile styles
-PRODUCT_PACKAGES += \
-    QStileCircleTrim \
-    QStileDefault \
-    QStileDualToneCircle \
-    QStileSquircleTrim \
-    QStileCookie \
-    QStileAttemptMountain \
-    QStileCircleDualTone \
-    QStileCircleGradient \
-    QStileDottedCircle \
-    QStileNinja \
-    QStilePokesign \
-    QStileWavey \
-    QStileInkDrop \
-    QStileSquaremedo \
-    QStileOreo \
-    QStileOreoCircleTrim \
-    QStileOreoSquircleTrim \
-    QStilesCircleOutline
+#PRODUCT_PACKAGES += \
+#    QStileCircleTrim \
+#    QStileDefault \
+#    QStileDualToneCircle \
+#    QStileSquircleTrim \
+#    QStileCookie \
+#    QStileAttemptMountain \
+#    QStileCircleDualTone \
+#    QStileCircleGradient \
+#    QStileDottedCircle \
+#    QStileNinja \
+#    QStilePokesign \
+#    QStileWavey \
+#    QStileInkDrop \
+#    QStileSquaremedo \
+#    QStileOreo \
+#    QStileOreoCircleTrim \
+#    QStileOreoSquircleTrim \
+#    QStilesCircleOutline
 
 # QS header styles
-PRODUCT_PACKAGES += \
-    QSHeaderBlack \
-    QSHeaderGrey \
-    QSHeaderLightGrey \
-    QSHeaderAccent \
-    QSHeaderTransparent
+#PRODUCT_PACKAGES += \
+ #   QSHeaderBlack \
+ #  QSHeaderGrey \
+ #   QSHeaderLightGrey \
+ #   QSHeaderAccent \
+ #   QSHeaderTransparent
 
 # SubstratumSignature Package
-PRODUCT_COPY_FILES += \
-     vendor/derp/prebuilt/common/app/SubstratumSignature.apk:system/priv-app/SubstratumSignature/SubstratumSignature.apk
+#PRODUCT_COPY_FILES += \
+#     vendor/derp/prebuilt/common/app/SubstratumSignature.apk:system/priv-app/SubstratumSignature/SubstratumSignature.apk
 
 # Permissions
 PRODUCT_COPY_FILES += \
     vendor/derp/prebuilt/common/etc/permissions/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml
 
-PRODUCT_COPY_FILES += \
-    vendor/derp/prebuilt/common/etc/permissions/privapp-permissions-omnijaws.xml:system/etc/permissions/privapp-permissions-omnijaws.xml
+#PRODUCT_COPY_FILES += \
+#    vendor/derp/prebuilt/common/etc/permissions/privapp-permissions-omnijaws.xml:system/etc/permissions/privapp-permissions-omnijaws.xml
 
 # Sysconfig
 PRODUCT_COPY_FILES += \
     vendor/derp/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
 
 # Omni Poor Man Themes
-PRODUCT_PACKAGES += \
-    ContactsTheme \
-    DocumentsUITheme \
-    DialerTheme \
-    MessagesTheme \
-    TelecommTheme \
-    PhonographTheme
+#PRODUCT_PACKAGES += \
+#    ContactsTheme \
+#    DocumentsUITheme \
+#    DialerTheme \
+#    MessagesTheme \
+#    TelecommTheme \
+#    PhonographTheme
+
+#PRODUCT_PACKAGES += \
+#    NotificationsXtended \
+#    NotificationsBlack \
+#    NotificationsDark \
+#    NotificationsLight \
+#    NotificationsPrimary
+#PRODUCT_PACKAGES += \
+ #   AccentSluttyPink \
+ #   AccentPixel \
+ #   AccentGoldenShower \
+ #   AccentDeepOrange \
+ #   AccentMisticBrown \
+ #   AccentOmni \
+ #   AccentWhite \
+ #   AccentTeal \
+ #   AccentFromHell \
+ #   AccentBlueMonday \
+ #   AccentSmokingGreen \
+ #   AccentDeadRed \
+ #   AccentRottenOrange \
+ #   AccentDeepPurple \
+ #   AccentBlackMagic \
+ #   AccentCandyRed \
+ #   AccentExtendedGreen \
+ #   AccentJadeGreen \
+ #   AccentPaleBlue \
+ #   AccentPaleRed \
+ #   AccentObfusBleu \
+ #   AccentNotImpPurple \
+ #   AccentHolillusion \
+ #   AccentMoveMint \
+ #   AccentFootprintPurple \
+ #   AccentBubblegumPink \
+ #   AccentFrenchBleu \
+ #   AccentManiaAmber \
+ #   AccentSeasideMint \
+ #   AccentDreamyPurple \
+ #   AccentSpookedPurple \
+ #   AccentHeirloomBleu \
+ #   AccentTruFilPink \
+ #   AccentWarmthOrange \
+ #   AccentColdBleu \
+ #   AccentDiffDayGreen \
+ #   AccentDuskPurple \
+ #   AccentBurningRed \
+ #   AccentHazedPink \
+ #   AccentColdYellow \
+ #   AccentNewHouseOrange \
+ #   AccentIllusionsPurple
 
 PRODUCT_PACKAGES += \
-    NotificationsXtended \
-    NotificationsBlack \
-    NotificationsDark \
-    NotificationsLight \
-    NotificationsPrimary
-PRODUCT_PACKAGES += \
-    AccentSluttyPink \
-    AccentPixel \
-    AccentGoldenShower \
-    AccentDeepOrange \
-    AccentMisticBrown \
-    AccentOmni \
-    AccentWhite \
-    AccentTeal \
-    AccentFromHell \
-    AccentBlueMonday \
-    AccentSmokingGreen \
-    AccentDeadRed \
-    AccentRottenOrange \
-    AccentDeepPurple \
-    AccentBlackMagic \
-    AccentCandyRed \
-    AccentExtendedGreen \
-    AccentJadeGreen \
-    AccentPaleBlue \
-    AccentPaleRed \
-    AccentObfusBleu \
-    AccentNotImpPurple \
-    AccentHolillusion \
-    AccentMoveMint \
-    AccentFootprintPurple \
-    AccentBubblegumPink \
-    AccentFrenchBleu \
-    AccentManiaAmber \
-    AccentSeasideMint \
-    AccentDreamyPurple \
-    AccentSpookedPurple \
-    AccentHeirloomBleu \
-    AccentTruFilPink \
-    AccentWarmthOrange \
-    AccentColdBleu \
-    AccentDiffDayGreen \
-    AccentDuskPurple \
-    AccentBurningRed \
-    AccentHazedPink \
-    AccentColdYellow \
-    AccentNewHouseOrange \
-    AccentIllusionsPurple
-
-PRODUCT_PACKAGES += \
-    PrimaryAlmostBlack \
-    PrimaryBlack \
-    PrimaryDerpRed \
-    PrimaryXtended \
-    PrimaryXtendedClear \
-    PrimaryEyeSoother \
-    PrimaryOmni \
-    PrimaryWhite \
-    PrimaryColdWhite \
-    PrimaryWarmWhite \
-    PrimaryDarkBlue \
-    PrimaryViolator \
-    PrimaryTealMeal
+    #PrimaryAlmostBlack \
+    #PrimaryBlack \
+    #PrimaryDerpRed \
+    #PrimaryXtended \
+    #PrimaryXtendedClear \
+    #PrimaryEyeSoother \
+    #PrimaryOmni \
+    #PrimaryWhite \
+    #PrimaryColdWhite \
+    #PrimaryWarmWhite \
+    #PrimaryDarkBlue \
+    #PrimaryViolator \
+    #PrimaryTealMeal
 
 #font stuff
-PRODUCT_COPY_FILES += \
-    vendor/derp/prebuilt/fonts/gobold/Gobold.ttf:system/fonts/Gobold.ttf \
-    vendor/derp/prebuilt/fonts/gobold/Gobold-Italic.ttf:system/fonts/Gobold-Italic.ttf \
-    vendor/derp/prebuilt/fonts/gobold/GoboldBold.ttf:system/fonts/GoboldBold.ttf \
-    vendor/derp/prebuilt/fonts/gobold/GoboldBold-Italic.ttf:system/fonts/GoboldBold-Italic.ttf \
-    vendor/derp/prebuilt/fonts/gobold/GoboldThinLight.ttf:system/fonts/GoboldThinLight.ttf \
-    vendor/derp/prebuilt/fonts/gobold/GoboldThinLight-Italic.ttf:system/fonts/GoboldThinLight-Italic.ttf \
-    vendor/derp/prebuilt/fonts/gobold/GoboldThinLight-Italic.ttf:system/fonts/GoboldThinLight-Italic.ttf \
-    vendor/derp/prebuilt/fonts/neoneon/neoneon.ttf:system/fonts/Neoneon-Regular.ttf \
-    vendor/derp/prebuilt/fonts/roadrage/road_rage.ttf:system/fonts/RoadRage-Regular.ttf \
-    vendor/derp/prebuilt/fonts/snowstorm/snowstorm.ttf:system/fonts/Snowstorm-Regular.ttf \
-    vendor/derp/prebuilt/fonts/vcrosd/vcr_osd_mono.ttf:system/fonts/ThemeableFont-Regular.ttf \
-    vendor/derp/prebuilt/fonts/vcrosd/vcr_osd_mono.ttf:system/fonts/ThemeableFont-Regular.ttf \
-    vendor/derp/prebuilt/fonts/Shamshung/Shamshung.ttf:system/fonts/Shamshung.ttf \
-    vendor/derp/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
-    vendor/derp/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \
-    vendor/derp/fonts/GoogleSans-MediumItalic.ttf:system/fonts/GoogleSans-MediumItalic.ttf \
-    vendor/derp/fonts/GoogleSans-Italic.ttf:system/fonts/GoogleSans-Italic.ttf \
-    vendor/derp/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
-    vendor/derp/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf
+#PRODUCT_COPY_FILES += \
+#    vendor/derp/prebuilt/fonts/gobold/Gobold.ttf:system/fonts/Gobold.ttf \
+#    vendor/derp/prebuilt/fonts/gobold/Gobold-Italic.ttf:system/fonts/Gobold-Italic.ttf \
+#    vendor/derp/prebuilt/fonts/gobold/GoboldBold.ttf:system/fonts/GoboldBold.ttf \
+#    vendor/derp/prebuilt/fonts/gobold/GoboldBold-Italic.ttf:system/fonts/GoboldBold-Italic.ttf \
+#    vendor/derp/prebuilt/fonts/gobold/GoboldThinLight.ttf:system/fonts/GoboldThinLight.ttf \
+#    vendor/derp/prebuilt/fonts/gobold/GoboldThinLight-Italic.ttf:system/fonts/GoboldThinLight-Italic.ttf \
+#    vendor/derp/prebuilt/fonts/gobold/GoboldThinLight-Italic.ttf:system/fonts/GoboldThinLight-Italic.ttf \
+#    vendor/derp/prebuilt/fonts/neoneon/neoneon.ttf:system/fonts/Neoneon-Regular.ttf \
+#    vendor/derp/prebuilt/fonts/roadrage/road_rage.ttf:system/fonts/RoadRage-Regular.ttf \
+#    vendor/derp/prebuilt/fonts/snowstorm/snowstorm.ttf:system/fonts/Snowstorm-Regular.ttf \
+#    vendor/derp/prebuilt/fonts/vcrosd/vcr_osd_mono.ttf:system/fonts/ThemeableFont-Regular.ttf \
+#    vendor/derp/prebuilt/fonts/vcrosd/vcr_osd_mono.ttf:system/fonts/ThemeableFont-Regular.ttf \
+#    vendor/derp/prebuilt/fonts/Shamshung/Shamshung.ttf:system/fonts/Shamshung.ttf \
+#    vendor/derp/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
+#    vendor/derp/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \
+#    vendor/derp/fonts/GoogleSans-MediumItalic.ttf:system/fonts/GoogleSans-MediumItalic.ttf \
+#    vendor/derp/fonts/GoogleSans-Italic.ttf:system/fonts/GoogleSans-Italic.ttf \
+#    vendor/derp/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
+#    vendor/derp/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf
 
 #BootAnimation
 $(call inherit-product, vendor/derp/config/bootanimation.mk)
