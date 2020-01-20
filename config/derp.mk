@@ -213,6 +213,9 @@ $(call inherit-product, vendor/derp/config/bootanimation.mk)
 #Telephony
 $(call inherit-product, vendor/derp/config/telephony.mk)
 
+#Themes
+$(call inherit-product, vendor/derp/themes/backgrounds/themes.mk)
+
 #Props
 $(call inherit-product, vendor/derp/config/props.mk)
 
