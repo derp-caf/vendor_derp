@@ -211,8 +211,8 @@ PRODUCT_PACKAGES += tcmiface
 PRODUCT_BOOT_JARS += tcmiface
 
 # Overlays
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/derp/overlay/*
-DEVICE_PACKAGE_OVERLAYS += vendor/derp/overlay/*
+PRODUCT_PACKAGE_OVERLAYS += \
+	vendor/derp/overlay/common
 
 # Default notification/alarm sounds
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
