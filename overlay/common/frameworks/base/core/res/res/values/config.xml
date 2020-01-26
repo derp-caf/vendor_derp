@@ -73,13 +73,6 @@
          activated. -->
     <integer name="config_nightDisplayColorTemperatureDefault">2650</integer>
 
-    <!-- non blockable notification packages -->
-    <string-array name="config_nonBlockableNotificationPackages">
-        <item>com.android.dialer</item>
-        <item>com.google.android.dialer</item>
-        <item>com.google.android.deskclock</item>
-    </string-array>
-
     <!-- empheral resolver packages -->
     <string-array name="config_ephemeralResolverPackage">
         <item>com.google.android.gms</item>
