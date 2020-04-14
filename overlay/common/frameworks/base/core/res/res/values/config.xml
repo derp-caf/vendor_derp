@@ -124,4 +124,6 @@
         <item>org.briarproject.briar.android</item>
     </string-array>
 
+    <!-- Turn on dark theme by default -->
+    <integer name="config_defaultNightMode">2</integer>
 </resources>
