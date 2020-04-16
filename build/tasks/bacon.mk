@@ -27,9 +27,9 @@ CL_MAG="\033[35m"
 CL_CYN="\033[36m"
 CL_RST="\033[0m"
 
-.PHONY: bacon
-derp: bacon
-bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
+.PHONY: bacon derp
+bacon: derp
+derp: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(DERP_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(DERP_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(DERP_TARGET_PACKAGE).md5sum
 	 @echo "Package Complete: $(INTERNAL_BACON_TARGET)" >&2
@@ -50,6 +50,6 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	 @echo -e ${CL_RED}"======================================================================"${CL_RED}
 	 @echo -e ${CL_RST}"  $(INTERNAL_BACON_TARGET)                                            "${CL_RST}
 	 @echo "Zip: $(DERP_TARGET_PACKAGE)"
-	 @echo -e ${CL_BLD}${CL_YLW}"Size:"${CL_YLW}" `du -sh $(INTERNAL_BACON_TARGET) | awk '{print $$1}' `"${CL_RST}
+	 @echo -e ${CL_BLD}${CL_YLW}"Size:"${CL_YLW}" `du -sh $(DERP_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
 	 @echo -e ${CL_RED}"======================================================================"${CL_RED}
 	 @echo -e ${CL_RST}"                                                                      "${CL_RST}
