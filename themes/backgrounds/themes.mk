@@ -1,5 +1,7 @@
 # Themes
 PRODUCT_PACKAGES += \
+    ClearlyDerpSystemOverlay \
+    ClearlyDerpSystemUIOverlay \
     PitchBlackSystemOverlay \
     PitchBlackSystemUIOverlay \
     SolarizedDarkSystemOverlay \
