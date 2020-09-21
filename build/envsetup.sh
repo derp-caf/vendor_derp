@@ -234,8 +234,8 @@ function breakfast()
     DERP_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
     add_lunch_combo full-eng
-    for f in `/bin/ls vendor/derp/build/vendorsetup.sh 2> /dev/null`
-        do
+       for f in $(test -d $ANDROID_BUILD_TOP/vendor/derp && \
+            find -L $ANDROID_BUILD_TOP/vendor/derp  -maxdepth 4 -name 'vendorsetup.sh' 2>/dev/null | sort); do
             echo "including $f"
             . $f
         done
@@ -529,16 +529,16 @@ function makerecipe() {
     '
 }
 
+# Make using all available CPUs
 function mka() {
-
-    call_hook ${FUNCNAME[0]} $@
-    if [ $? -ne 0 ]; then
-        return 1
-    fi
-
-    generate_vendor_hidl_makefiles
-
-    m -j "$@"
+    case `uname -s` in
+        Darwin)
+            make -j `sysctl hw.ncpu|cut -d" " -f2` "$@"
+            ;;
+        *)
+            make -j `cat /proc/cpuinfo | grep "^processor" | wc -l` "$@"
+            ;;
+    esac
 }
 
 function derpmka() {
