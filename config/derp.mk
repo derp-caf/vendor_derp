@@ -151,7 +151,7 @@ endif
 ifndef DERP_BUILD_TYPE
     BUILD_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 ifeq ($(DERP_RELEASE),true)
-    FOUND = $(shell curl -s https://raw.githubusercontent.com/Derp-CAF/vendor_derp/p/derp.devices)
+    FOUND = $(shell /usr/bin/curl -s https://raw.githubusercontent.com/Derp-CAF/vendor_derp/r11/derp.devices)
     GOT_DEVICE =  $(filter $(BUILD_DEVICE), $(FOUND))
     ifeq ($(GOT_DEVICE),$(BUILD_DEVICE))
     IS_OFFICIAL=true
@@ -172,10 +172,10 @@ endif
 
 
 # Derp-CAF versions.
-CAF_REVISION := LA.UM.8.1.r1-12600-sm8150.0
+CAF_REVISION := LA.UM.9.2.r1-00900-SDMxx0.0
 DERP_VERSION_FLAVOUR = ALPHA
-DERP_VERSION_CODENAME := 0.04
-PLATFORM_VERSION_FLAVOUR := 10
+DERP_VERSION_CODENAME := 0.05
+PLATFORM_VERSION_FLAVOUR := R
 
 # Set all versions
 DERP_VERSION := DerpCAF-v$(DERP_VERSION_CODENAME)-$(DERP_VERSION_FLAVOUR)-$(PLATFORM_VERSION_FLAVOUR)-$(DERP_BUILD_TYPE)$(DERP_POSTFIX)
