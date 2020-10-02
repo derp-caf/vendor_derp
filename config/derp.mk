@@ -193,6 +193,11 @@ PRODUCT_PACKAGES += \
     LatinIME \
     MusicFX
 
+# Navbar
+PRODUCT_PACKAGES += \
+    GesturalNavigationOverlayLong \
+    GesturalNavigationOverlayMedium
+
 ifneq ($(HOST_OS),linux)
 ifneq ($(sdclang_already_warned),true)
 $(warning **********************************************)
