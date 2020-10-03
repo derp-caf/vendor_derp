@@ -1,6 +1,5 @@
 # Telephony packages
 PRODUCT_PACKAGES += \
-    QtiDialer \
     messaging \
     Stk \
     CellBroadcastReceiver

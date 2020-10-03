@@ -96,11 +96,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
 
-# Permissions
-PRODUCT_COPY_FILES += \
-    vendor/derp/prebuilt/common/etc/sysconfig/hiddenapi-package-whitelist-derp.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hiddenapi-package-whitelist-derp.xml \
-    vendor/derp/prebuilt/common/etc/permissions/privapp-permissions-derp.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-derp.xml
-
 # Misc packages
 PRODUCT_PACKAGES += \
     libemoji \

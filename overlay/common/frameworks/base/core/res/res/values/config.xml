@@ -98,30 +98,6 @@
     <!-- default window inset isRound property -->
     <bool name="config_windowIsRound">true</bool>
 
-    <!-- The name of the package that will hold the dialer role by default. -->
-    <string name="config_defaultDialer" translatable="false">org.codeaurora.dialer</string>
-
-    <string-array translatable="false" name="config_nonBlockableNotificationPackages">
-        <item>org.codeaurora.dialer</item>
-        <item>com.android.messaging</item>
-    </string-array>
-
-    <!-- An array of packages that can make sound on the ringer stream in priority-only DND
-     mode -->
-    <string-array translatable="false" name="config_priorityOnlyDndExemptPackages">
-        <item>org.codeaurora.dialer</item>
-    </string-array>
-
-    <string-array translatable="false" name="required_apps_managed_user">
-        <item>com.android.settings</item>
-        <item>com.android.contacts</item>
-        <item>org.codeaurora.dialer</item>
-        <item>com.android.stk</item>  <!-- Required by com.android.phone by certain carriers -->
-        <item>com.android.providers.downloads</item>
-        <item>com.android.providers.downloads.ui</item>
-        <item>com.android.documentsui</item>
-    </string-array>
-
     <!-- Specifies the path that is used by AdaptiveIconDrawable class to crop launcher icons. -->
     <string name="config_icon_mask" translatable="false">"M50 0C77.6 0 100 22.4 100 50C100 77.6 77.6 100 50 100C22.4 100 0 77.6 0 50C0 22.4 22.4 0 50 0Z"</string>
 
