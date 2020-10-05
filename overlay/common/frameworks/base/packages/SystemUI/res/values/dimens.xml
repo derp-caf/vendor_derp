@@ -32,4 +32,7 @@
     <!--  Blur radius on status bar window and power menu  -->
     <dimen name="max_window_blur_radius">175px</dimen>
 
+    <dimen name="search_bar_corner_radius">8dp</dimen>
+    <dimen name="search_bar_card_elevation">1dp</dimen>
+
 </resources>
