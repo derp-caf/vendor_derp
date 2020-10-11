@@ -189,6 +189,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 #Derp additions
 PRODUCT_PACKAGES += \
+    ThemePicker \
     SnapdragonGallery \
     LatinIME \
     MusicFX
