@@ -167,7 +167,7 @@ endif
 
 
 # Derp-CAF versions.
-CAF_REVISION := LA.UM.9.2.r1-00900-SDMxx0.0
+CAF_REVISION := LA.UM.9.2.r1-01000-SDMxx0.0
 DERP_VERSION_FLAVOUR = ALPHA
 DERP_VERSION_CODENAME := 0.05
 PLATFORM_VERSION_FLAVOUR := R
@@ -190,10 +190,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 #Derp additions
 PRODUCT_PACKAGES += \
     ThemePicker \
-    SnapdragonGallery \
     LatinIME \
     MusicFX
-
 
 ifneq ($(HOST_OS),linux)
 ifneq ($(sdclang_already_warned),true)
