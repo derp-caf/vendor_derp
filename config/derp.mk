@@ -199,6 +199,13 @@ PRODUCT_PACKAGES += \
     GesturalNavigationOverlayMedium \
     GesturalNavigationOverlayHidden
 
+# Flipendo
+PRODUCT_PACKAGES += \
+    Flipendo
+
+PRODUCT_COPY_FILES += \
+    vendor/derp/prebuilt/google/etc/sysconfig/pixel_experience_2020.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2020.xml
+
 ifneq ($(HOST_OS),linux)
 ifneq ($(sdclang_already_warned),true)
 $(warning **********************************************)
