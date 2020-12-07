@@ -192,6 +192,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     ThemePicker \
     LatinIME \
+    OmniStyle \
     MusicFX
 
 # Navbar
